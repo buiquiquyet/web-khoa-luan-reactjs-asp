@@ -1,0 +1,26 @@
+.wrapper {
+    margin: 20px 0;
+    display: flex;
+    flex: 1;
+}
+//left
+.content-left {
+    padding-right: 30px;
+    width: 80%;
+}
+.project-lable {
+    font-size: 2rem;
+    // color: var(--primary);
+    font-weight: bold;
+    background: url('./../../../Image/headerProject.png');
+    padding: 6px 12px;
+    background-size: contain;
+    
+}
+.post-text{
+    margin: 30px 0;
+    font-size: 1.78rem;
+    color: #555;
+    line-height: 3.1rem ;
+    text-align: justify;
+}

@@ -1,0 +1,46 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    width: 100%;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+}
+.name {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+.nickname {
+    font-size: 1.4rem;
+    color: var(--text-color-small);
+}
+.user-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 1.6rem;
+    border-top: 1px solid var(--boder-color);
+    &:hover {
+        background-color: var(--color-hover);
+        color: white;
+    }
+}
+.icon {
+    width: 20%;
+}
+.item-text {
+    flex: 1;
+    padding-left: 10px;
+}

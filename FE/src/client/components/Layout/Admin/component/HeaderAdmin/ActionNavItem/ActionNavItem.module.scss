@@ -1,0 +1,41 @@
+//button-icon
+.action {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 0.7 ;
+    font-size: 2rem;
+}
+.button-bell {
+    position: relative;
+    font-size: 1.8rem;
+    margin: 14px;
+    background-color: transparent;
+    cursor: pointer;
+}
+.button-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    content: "";
+    top: -8px;
+    right: -4px;
+    width: 15px;
+    height: 16px;
+    background-color: red;
+    border-radius: 999px;
+    font-size: 1rem;
+    color: white;
+    
+}
+.icon {
+    font-size: 2rem;
+    background-color: none;
+    
+}
+.user {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}

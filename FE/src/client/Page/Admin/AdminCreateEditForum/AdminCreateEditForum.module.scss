@@ -1,0 +1,47 @@
+.wrapper {
+    flex: 1;
+}
+.lable-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-end;
+}
+.lable {
+    
+    font-size: 2.2rem;
+    position: relative;
+    color: var(--primary);
+    font-weight: 600;
+    text-align: center;
+    flex: 1;
+}
+.form-create {
+    padding:  20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.form-submit {
+    width: 100%;
+}
+
+.form-input {
+    padding: 10px 0;
+    display: flex;
+}
+.form-input input, .form-input textarea {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 2.8rem;
+  
+}
+
+.form-button {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+

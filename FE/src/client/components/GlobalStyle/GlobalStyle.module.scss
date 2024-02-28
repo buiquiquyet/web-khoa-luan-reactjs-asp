@@ -1,0 +1,41 @@
+:root {
+    --primary: #245d7c;
+    --text-color: #282f53;
+    --black: #000;
+    --boder-color: #cbced1;
+    --text-color-small: #74829c;
+    --color-hover: #4988bc;
+    --color-hover-2: #f4f1f1;
+    --header-height: 75px;
+    --background-button:  rgba(22, 24, 35, 0.06);
+    --background-color: #4988bc;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed; 
+    height: 100%;
+   
+}
+button, input, [tabIndex], textarea {
+    outline: none;
+    border: none;
+}
+a[href] {
+    color: var(--text-color);
+    text-decoration: none;
+}
+

@@ -1,0 +1,107 @@
+.wrapper {
+    flex: 1;
+    margin-bottom: 50px;
+}
+.lable-box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-end;
+}
+.lable {
+    
+    font-size: 2.2rem;
+    position: relative;
+    color: var(--primary);
+    font-weight: 600;
+    text-align: center;
+    flex: 1;
+}
+.form-create {
+    padding:  20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.form-submit {
+    width: 100%;
+}
+
+.form-input {
+    padding: 10px 0;
+    display: flex;
+}
+.form-input input, .form-input textarea {
+    flex: 1;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 2.8rem;
+  
+}
+
+.form-button {
+    display: flex;
+    justify-content: flex-end;
+}
+//upload-select
+.upload-select {
+    margin-top: 30px;
+    padding: 20px;
+}
+.form-select{
+    width: 20% !important;
+    border: 1px solid black;
+    border-radius: 7px;
+    height: 45px;
+    &:focus-within {
+        border: 1px solid var(--primary);
+        transition: all linear .3s;
+    }
+}
+.select-box {
+    display: flex;
+    width: 100%;
+    margin-bottom: 40px;
+    span{
+        width: 10%;
+    }
+    
+}
+.upload-input {
+   
+    display: block;
+    width: 20%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    transition: border-color 0.3s ease;
+  
+   
+    &:hover {
+      border-color: #aaa;
+    }
+  
+    &::-webkit-file-upload-button {
+      display: none;
+    }
+  
+    &::after {
+      content: 'Chọn tệp'; 
+      display: inline-block;
+      background-color: #3498db;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  
+    
+    &:hover::after {
+      background-color: #2980b9;
+    }
+  }

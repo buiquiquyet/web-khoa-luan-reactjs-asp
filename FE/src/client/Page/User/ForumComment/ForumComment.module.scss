@@ -1,0 +1,54 @@
+/* comment diễn đàn */
+.content-menu {
+    flex: 1;
+}
+.comment-infor{
+    margin-top: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 50px;
+    
+}
+.comment-lable{
+    font-weight: 500;
+    text-align: justify;
+}
+.comment-dateUser{
+    margin: 8px 0;
+    font-size: 1.4rem;
+    color: #666;
+    display: flex;
+    align-items: center;
+}
+.comment-date,
+.comment-user{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+   
+}
+.comment-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-right: 5px;
+}
+.commnet-post {
+    background-color: #f4f4f4;
+    border-left: 3px solid var(--primary) ;
+    font-size: 1.6rem;
+    border-radius: 3px;
+    padding: 20px;
+}
+.comment-dowload {
+    margin-top: 10px;
+    padding: 10px 0 0;
+    font-size: 1.4rem;
+    color: #666;
+    border-top: 1px solid #ccc;
+}
+.comment-dowload i {
+    color: var(--primary);
+}
+.commnet-post div {
+    text-align: justify;
+    line-height: 3rem;
+}

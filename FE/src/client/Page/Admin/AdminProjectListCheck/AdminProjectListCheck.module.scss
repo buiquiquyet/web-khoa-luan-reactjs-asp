@@ -1,0 +1,36 @@
+.wrapper {
+    padding: 20px;
+    background-color: #f4f5f7;
+    height: 100vh;
+}
+.lable {
+    margin-bottom: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.table {
+    box-shadow: 2px 2px 7px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.button {
+    margin-right: 10px;
+    color: white !important;
+}
+.td-table {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 3; 
+    
+}
+.linkFile-icon {
+    cursor: pointer;
+    color: blue !important;
+}
+.box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+

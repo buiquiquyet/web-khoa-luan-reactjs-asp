@@ -1,0 +1,32 @@
+.header-menu {
+    width: 100%;
+    background-color: var(--primary);
+}
+.nav-menu {
+   display: flex;
+   justify-content: space-between;
+   padding: 0 20px;
+   align-items: center;
+}
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    .nav-item {
+        font-size: 1.6rem;
+        padding: 10px;
+        color: white;
+    }  
+}
+.nav-item:hover {
+    background-color:#66b3ff;
+    cursor: pointer;
+}
+
+
+
+//active
+.selected {
+    background-color: var(--color-hover);
+ 
+}

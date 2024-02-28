@@ -1,0 +1,28 @@
+
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.download {
+    margin-top: 20px;
+    img {
+        width: 150px;
+        height: 100%;
+    }
+}
+.btn-download {
+    background-color: transparent;
+    cursor: pointer;
+}
+.postIframe {
+    width: 100%;
+    height: 700px;
+    iframe {
+        height: 100%;
+        width: 100%;
+        border: none;
+    }
+}
