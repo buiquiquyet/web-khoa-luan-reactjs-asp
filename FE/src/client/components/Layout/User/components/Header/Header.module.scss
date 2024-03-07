@@ -52,7 +52,7 @@
 /* login */
 .modal {
     
-    z-index: 999;
+    z-index: 1;
     display: none;
     
 }
@@ -129,6 +129,7 @@
         display: flex;
         align-items: center;
         font-weight: 600;
+        font-size: 1.45rem;
         margin-right: 10px;
         color: white;
     }

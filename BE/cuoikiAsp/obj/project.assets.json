@@ -2275,11 +2275,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\QuyetAsp-react\\cuoikiAsp\\cuoikiAsp\\cuoikiAsp.csproj",
+      "projectUniqueName": "D:\\Git Uploads\\web-khoa-luan-reactjs-asp\\BE\\cuoikiAsp\\cuoikiAsp.csproj",
       "projectName": "cuoikiAsp",
-      "projectPath": "D:\\QuyetAsp-react\\cuoikiAsp\\cuoikiAsp\\cuoikiAsp.csproj",
+      "projectPath": "D:\\Git Uploads\\web-khoa-luan-reactjs-asp\\BE\\cuoikiAsp\\cuoikiAsp.csproj",
       "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "D:\\QuyetAsp-react\\cuoikiAsp\\cuoikiAsp\\obj\\",
+      "outputPath": "D:\\Git Uploads\\web-khoa-luan-reactjs-asp\\BE\\cuoikiAsp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -28,6 +28,8 @@ function NavMenu() {
                     }
                     <Link to={'/projects'}   className={cx('nav-item', {'selected':  type === 'projects' || 'projectPost' === type || type === 'projectsByDeparmentId' })}>DANH SÁCH KHÓA LUẬN</Link>
                     <Link to={'/forum'}   className={cx('nav-item', {'selected':  type.includes('forum')})}>DIỄN ĐÀN</Link>
+                    <Link to={'/quydinh'}   className={cx('nav-item', {'selected':  type.includes('quydinh')})}>QUY ĐỊNH</Link>
+
                 </ul>
                 {/* { (type === 'projectsManager' || type === 'projects') &&
                     <div className={cx('nav-search')}>

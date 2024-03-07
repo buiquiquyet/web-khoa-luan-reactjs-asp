@@ -1,7 +1,7 @@
 import classNames from "classnames/bind";
 import styles from './CommentItem.module.scss'
 import { SendIcon, LikeIcon, LikeIconLast } from "../../../../../../Icon";
-import { useState, useEffect } from "react";
+import { useState, useEffect, memo } from "react";
 import { NotificationManager, NotificationContainer } from 'react-notifications';
 import * as ServiceEvaluateApi from './../../../../../../apiServieces/Evaluate'
 import * as ServiceCommentApi from './../../../../../../apiServieces/CommentApi'
@@ -275,6 +275,7 @@ function CommentItem({  onEditComment, visibleItems, dataComment, fecthCommentAp
         fecthAllEvaluate()
         fecthGetCommnetByTypePostCommentIdotherNull(typePost, idForum)
     },[typePost, idForum])
+    console.log(1);
     return ( 
       <div>
           {dataComment  && dataComment.slice(0, visibleItems).map((item, index) =>    
@@ -429,4 +430,4 @@ function CommentItem({  onEditComment, visibleItems, dataComment, fecthCommentAp
      )
 }
 
-export default CommentItem;
+export default memo(CommentItem);

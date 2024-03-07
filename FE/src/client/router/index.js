@@ -13,6 +13,7 @@ import AdminCreateEditUser from "../Page/Admin/AdminCreateEditUser";
 import AdminForum from "../Page/Admin/AdminForum";
 import AdminCreateEditForum from "../Page/Admin/AdminCreateEditForum";
 import AdminProjectListCheck from "../Page/Admin/AdminProjectListCheck";
+import quydinh from "../Page/User/quydinh";
 
 const isLoggedIn = localStorage.getItem('statusLogin') === 'login';
 const checkUserGroup = localStorage.getItem('UserGroup') === 'GV';
@@ -22,9 +23,8 @@ const basicRouter = [
     {path: '/', component: Home, layout: DefaultLayout, type: 'homeUser'},
     {path: '/projects', component: Projects, layout: DefaultLayout, type: 'projects'},
     {path: '/projects/:urlDepartmentId/:departmentName', component: Projects, layout: DefaultLayout, type: 'projectsByDeparmentId'},
-    {path: '/projectCreateEdit', component: ProjectCreateEdit, layout: DefaultLayout, type: 'projectCreateUser'},
-    {path: '/projectCreateEdit/:projectId', component: ProjectCreateEdit, layout: DefaultLayout, type: 'projectEditUser'},
     {path: '/forum', component: Forum, layout: DefaultLayout, type: 'forum'},
+    {path: '/quydinh', component: quydinh, layout: DefaultLayout, type: 'quydinh'},
     {path: '/forumComment/:idForum', component: ForumComment, layout: DefaultLayout, type: 'forumComment'},
     {path: '/projectPost/:projectId/:userName', component: ProjectPost, layout: DefaultLayout, type: 'projectPost'},
     // {path: '/projectPost', component: ProjectPost, layout: DefaultLayout, type: 'projectPost'},
@@ -48,7 +48,18 @@ const loggedInRoutes = isLoggedIn && checkUserGroup
             layout: DefaultLayout,
             type: 'projectsManager'
         },
-        // {path: '/userInfo', component: UserInfo, layout: DefaultLayout, type: 'userInfo'},
+        {
+            path: '/projectCreateEdit',
+            component: ProjectCreateEdit,
+            layout: DefaultLayout,
+            type: 'projectCreateUser'
+        },
+        {
+            path: '/projectCreateEdit/:projectId',
+            component: ProjectCreateEdit,
+            layout: DefaultLayout,
+            type: 'projectEditUser'
+        },
 
     ]
     : [];

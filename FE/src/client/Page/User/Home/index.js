@@ -15,7 +15,8 @@ import { useRef } from "react";
 import { PrevIcon, NextIcon } from "../../../Icon";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css'; 
-
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css'; 
 const cx = classNames.bind(styles)
 
 function Home() {
@@ -101,82 +102,109 @@ function Home() {
                     </Link>
                 </div>
             </div>
-            <div className={cx('content-news')}>
-                <div className={cx('news-tab')}>
-                    <div className={cx('news-tabLabel')}><h2>Xem nhiều nhất</h2></div>
-                    <Link  to={'/projects'} className={cx('news-tabAll')}>Xem tất cả</Link>
-                </div>
-                <div className={cx('newsAll')}>
-                    {
-                        watchDataBig && watchDataBig.length > 0 && 
-                        watchDataBig.map((item, index) => (
-                            <Link key={index}  to={`/projectPost/${item.ProjectListId}/${item.UserName}`} className={cx('news-info')}>
-                                <div className={cx('news-left')}>
-                                    <img src={postImg} alt="img"/>
-                                </div>
-                                <div className={cx('news-right')}>
-                                    <div className={cx('newsRight-lable')}>
-                                        {item.Name}        
-                                    </div>
-                                    <div className={cx('newsRight-introduce')}>
-                                        <div className={cx('newsRight-name')}>{item.UserName}</div>
-                                        <div><EyeIcon width="1.8rem"/> {item.Watched}</div>
-                                        <div><DowIcon width="1.8rem"/> {item.Download}</div>
-                                    </div>
-                                    <div className={cx('newsRight-date')}>
-                                        <DateIcon width="1.2rem"/>
-                                        <span>{new Date(item.CreatedDate).toLocaleDateString()}</span>
+            {
+                watchDataBig && watchDataBig.length > 0 &&
+                <div className={cx('content-news')}>
+                    <div className={cx('news-tab')}>
+                        <div className={cx('news-tabLabel')}><h2>Xem nhiều nhất</h2></div>
+                        <Link  to={'/projects'} className={cx('news-tabAll')}>Xem tất cả</Link>
+                    </div>
+                    <div className={cx('newsAll')}>
+                        {
+                            watchDataBig && watchDataBig.length > 0 && 
+                            watchDataBig.map((item, index) => (
+                                <Tippy key={index} 
+                                        content={
+                                            <div key={index}>
+                                                {item.Name}
+                                            </div>
+                                        }  
                                         
-                                    </div>
-                                    <div className={cx('newsRight-info')} 
-                                        dangerouslySetInnerHTML={{ __html: item.Discriptions }} 
-                                    />
-                                     
-                                </div>
-                            </Link>
-                        ))
-                    }  
+                                    arrow={true}
+                                    className={cx('customTippy')} 
+                                >
+                                    <Link key={index}  to={`/projectPost/${item.ProjectListId}/${item.UserName}`} className={cx('news-info')}>
+                                        <div className={cx('news-left')}>
+                                            <img src={postImg} alt="img"/>
+                                        </div>
+                                        <div className={cx('news-right')}>
+                                            <div className={cx('newsRight-lable')}>
+                                                {item.Name}        
+                                            </div>
+                                            <div className={cx('newsRight-introduce')}>
+                                                <div className={cx('newsRight-name')}>{item.UserName}</div>
+                                                <div><EyeIcon width="1.8rem"/> {item.Watched}</div>
+                                                <div><DowIcon width="1.8rem"/> {item.Download}</div>
+                                            </div>
+                                            <div className={cx('newsRight-date')}>
+                                                <DateIcon width="1rem"/>
+                                                <span>{new Date(item.CreatedDate).toLocaleDateString()}</span>
+                                                
+                                            </div>
+                                            <div className={cx('newsRight-info')} 
+                                                dangerouslySetInnerHTML={{ __html: item.Discriptions }} 
+                                            />
+                                            
+                                        </div>
+                                    </Link>
+                                </Tippy>
+                            ))
+                        }  
+                    </div>
                 </div>
-            </div>
-            <div className={cx('content-news')}>
-                <div className={cx('news-tab')}>
-                    <div className={cx('news-tabLabel')}><h2>Tải nhiều nhất</h2></div>
-                    <Link  to={'/projects'} className={cx('news-tabAll')}>Xem tất cả</Link>
-                </div>
-                <div className={cx('newsAll')}>
-                    {
-                        downloadDataBig && downloadDataBig.length > 0 && 
-                        downloadDataBig.map((item, index) => (
-                            <Link key={index}  to={`/projectPost/${item.ProjectListId}/${item.UserName}`} className={cx('news-info')}>
-                                <div className={cx('news-left')}>
-                                    <img src={postImg} alt="img"/>
-                                </div>
-                                <div className={cx('news-right')}>
-                                    <div className={cx('newsRight-lable')}>
-                                        {item.Name}        
-                                    </div>
-                                    <div className={cx('newsRight-introduce')}>
-                                        <div className={cx('newsRight-name')}>{item.UserName}</div>
-                                        <div><EyeIcon width="1.8rem"/> {item.Watched}</div>
-                                        <div><DowIcon width="1.8rem"/> {item.Download}</div>
-                                    </div>
-                                    <div className={cx('newsRight-date')}>
-                                        <DateIcon width="1.2rem"/>
-                                        <span>{new Date(item.CreatedDate).toLocaleDateString()}</span>
-                                        
-                                    </div>
-                                    <div className={cx('newsRight-info')} 
-                                        dangerouslySetInnerHTML={{ __html: item.Discriptions }} 
-                                    />
-                                     
-                                </div>
-                            </Link>
-                        ))
-                    }
-                    
-                </div>
+            }
+            {
+                downloadDataBig && downloadDataBig.length > 0 &&
+                <div className={cx('content-news')}>
+                    <div className={cx('news-tab')}>
+                        <div className={cx('news-tabLabel')}><h2>Tải nhiều nhất</h2></div>
+                        <Link  to={'/projects'} className={cx('news-tabAll')}>Xem tất cả</Link>
+                    </div>
+                    <div className={cx('newsAll')}>
+                        {
+                            downloadDataBig && downloadDataBig.length > 0 && 
+                            downloadDataBig.map((item, index) => (
+                                <Tippy key={index} 
+                                        content={
+                                            <div key={index}>
+                                                {item.Name}
+                                            </div>
+                                        }  
+                                    arrow={true}
+                                >
+                                    <Link key={index}  to={`/projectPost/${item.ProjectListId}/${item.UserName}`} className={cx('news-info')}>
+                                        <div className={cx('news-left')}>
+                                            <img src={postImg} alt="img"/>
+                                        </div>
+                                        <div className={cx('news-right')}>
+                                            <div className={cx('newsRight-lable')}>
+                                                {item.Name}        
+                                            </div>
+                                            <div className={cx('newsRight-introduce')}>
+                                                <div className={cx('newsRight-name')}>{item.UserName}</div>
+                                                <div><EyeIcon width="1.8rem"/> {item.Watched}</div>
+                                                <div><DowIcon width="1.8rem"/> {item.Download}</div>
+                                            </div>
+                                            <div className={cx('newsRight-date')}>
+                                                <DateIcon width="1.2rem"/>
+                                                <span>{new Date(item.CreatedDate).toLocaleDateString()}</span>
+                                                
+                                            </div>
+                                            <div className={cx('newsRight-info')} 
+                                                dangerouslySetInnerHTML={{ __html: item.Discriptions }} 
+                                            />
+                                            
+                                        </div>
+                                    </Link>
+
+                                    </Tippy>
+                            ))
+                        }
+                        
+                    </div>
                 
-            </div>
+                </div>
+            }
         </div>
      );
 }

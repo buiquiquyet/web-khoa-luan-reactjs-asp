@@ -59,7 +59,7 @@ function Header() {
                 </div>
                 <div className={cx('login-input')}>
                     <label >Mật khẩu</label>
-                    <input  ref={passRef}  required type="text" />
+                    <input  ref={passRef}  required type="password" />
                 </div>
                 <div className={cx('login-button')}>
                     <button onClick={handleLogin}>Đăng nhập</button>
@@ -79,13 +79,13 @@ function Header() {
                 <div className={cx('header-login')}  >
                     {localStorage.getItem('statusLogin') === 'login' ? 
                     <div className={cx('log-out')}>
-                        <Link to={'/userInfo'}  className={cx('user')}><UserIcon/>{localStorage.getItem('name')}</Link> 
+                        <Link to={'/userInfo'}  className={cx('user')}><UserIcon width="1.5rem"/>{localStorage.getItem('name')}</Link> 
                         <div className={cx('logOut-div')} onClick= {handleLogOut}>
-                            <SignOutIcon  classsName={cx('log-icon')}/>
+                            <SignOutIcon  width="1.8rem"  classsName={cx('log-icon')}/>
                         </div>
                     </div>
                     : <div onClick= {handleModel} >
-                        <UserIcon classsName={cx('header-login--button')}/>    
+                        <UserIcon  classsName={cx('header-login--button')}/>    
                     </div>}
                 </div>
             </div>

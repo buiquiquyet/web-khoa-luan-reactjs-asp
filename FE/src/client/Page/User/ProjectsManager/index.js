@@ -59,8 +59,9 @@ function Projects() {
       return rs
     }
     const fecthCommentDelByPostTypeAndIdArr = async (option, type) => {
+      console.log(type);
       const rs = await ServiceCommentApi.DeleteByPostTypeAndIdArr(option, type)
-      if(rs.length > 0) {
+      if(rs && rs.length > 0) {
         setCommentIdArr(() => {
           return rs.map(item => item.CommentId)
         }) 

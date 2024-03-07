@@ -1,0 +1,16 @@
+.wrapper {
+    flex: 1;
+}
+.postIframe {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 700px;
+    iframe {
+        height: 100%;
+        min-width: 70%;
+        
+    }
+}

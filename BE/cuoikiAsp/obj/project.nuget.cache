@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dmMRb/dsM8ZFFagIBF1H8TXrlD6C1wTrcvW5rCluyq0jcDrlldwadjkh9ojIOg8x6fuwlkCHFgi/32J5OUTYCA==",
+  "dgSpecHash": "nwZrZiS4JB7i/U/ocVjz8s8kCw/jYe8Puxol1x6UsPuqPYPt8x9GUG65tpOJHlZPgslhq6Rj088EP+Pe9oWElg==",
   "success": true,
-  "projectFilePath": "D:\\QuyetAsp-react\\cuoikiAsp\\cuoikiAsp\\cuoikiAsp.csproj",
+  "projectFilePath": "D:\\Git Uploads\\web-khoa-luan-reactjs-asp\\BE\\cuoikiAsp\\cuoikiAsp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

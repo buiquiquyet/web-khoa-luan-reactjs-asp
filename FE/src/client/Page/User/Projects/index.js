@@ -12,7 +12,7 @@ import { useContext } from "react";
 import { MyContext } from "../../../../App";
 
 const cx = classNames.bind(styles)
-const itemsPerPage = 10;
+const itemsPerPage = 5;
 
 function Projects() {
     const type = useContext(MyContext)
@@ -63,7 +63,7 @@ function Projects() {
         <Link to={`/projectPost/${item.ProjectListId}/${item.UserName}`} key={index} className={cx('content-project')}>
             <span className={cx("project-lable")}>{item.Name}</span>
             <div className={cx("comment-dateUser")}>
-                <div className={cx("comment-date")}><DateIcon classsName={cx('comment-icon')} /><span >{new Date(item.CreatedDate).toLocaleDateString()}</span></div>
+                <div className={cx("comment-date")}><DateIcon  classsName={cx('comment-icon')} /><span >{new Date(item.CreatedDate).toLocaleDateString()}</span></div>
                 <div className={cx('comment-user')} ><UserIcon classsName={cx('comment-icon')} /><span>{item.UserName}</span></div>
                 <div className={cx('comment-user')} ><EyeIcon classsName={cx('comment-icon')} /><span>{item?.Watched || 0}</span></div>
                 <div className={cx('comment-user')} ><DowIcon classsName={cx('comment-icon')} /><span>{item?.Download || 0}</span></div>

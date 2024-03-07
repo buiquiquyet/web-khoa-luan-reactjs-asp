@@ -13,7 +13,7 @@ const cx = classNames.bind(styles)
 function AdminForum() {
     const [dataSource, setDataSource] = useState(null);
     const [pagination, setPagination] = useState({
-      pageSize: 10,
+      pageSize: 5,
       current: 1,
       total: 0,
       

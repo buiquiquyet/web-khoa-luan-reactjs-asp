@@ -31,6 +31,7 @@ function AdminProjectListCheck() {
         render : text =>  <div className={cx('td-table')} >{ text }</div>  
     },
     { title: 'Họ tên ', dataIndex: 'UserName', key: 'UserName' }, 
+    { title: 'Khoa ', dataIndex: 'DepartmentName', key: 'DepartmentName' }, 
     { title: 'File ', dataIndex: 'Image', key: 'Image',
         render : (text) =>  <a href={`https://localhost:7225/StaticFiles/${text}`} target="_blank" rel="noopener noreferrer" className={cx('linkFile-icon')}><LinkIcon/></a>   
     }, 

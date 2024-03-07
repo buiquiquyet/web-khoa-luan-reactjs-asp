@@ -9,8 +9,8 @@ const cx = classNames.bind(styles)
 function Forum() {
    const [dataForum, setDataForum] = useState(null);
    const [firstPartData, setFirstPartData] = useState([])
-   const [secondPartData, setSecondPartData] = useState([])
-   const [thirdPartData, setThirdPartData] = useState([])
+   // const [secondPartData, setSecondPartData] = useState([])
+   // const [thirdPartData, setThirdPartData] = useState([])
    const fetchApiGetAllForum = async () => {
       const rs = await ServiceForumApi.GetAll()  
       setDataForum(rs)    
@@ -26,32 +26,32 @@ function Forum() {
          const length = dataForum.length;
          const partSize = Math.floor(length / 3);
          let firstPart;
-         let secondPart;
-         let thirdPart;
+         // let secondPart;
+         // let thirdPart;
          if (length % 3 === 0) {
           
             firstPart = dataForum.slice(0, partSize );
-            secondPart = dataForum.slice(partSize, 2 * partSize);
-            thirdPart = dataForum.slice(2 * partSize);
+            // secondPart = dataForum.slice(partSize, 2 * partSize);
+            // thirdPart = dataForum.slice(2 * partSize);
           } else {
             if(length < 3) {
                firstPart = dataForum.slice(0, partSize + 1 );
-               secondPart = dataForum.slice(2 * partSize + 1 , 2 * partSize + 2 );
-               thirdPart = dataForum.slice(2 * partSize + 2);
+               // secondPart = dataForum.slice(2 * partSize + 1 , 2 * partSize + 2 );
+               // thirdPart = dataForum.slice(2 * partSize + 2);
             }
             else if(length % 2 === 0) {
                firstPart = dataForum.slice(0, partSize + 1 );
-               secondPart = dataForum.slice(partSize + 1, 2 * partSize + 1 );
-               thirdPart = dataForum.slice(2 * partSize + 1);
+               // secondPart = dataForum.slice(partSize + 1, 2 * partSize + 1 );
+               // thirdPart = dataForum.slice(2 * partSize + 1);
             }else {
                firstPart = dataForum.slice(0, partSize + 1 );
-               secondPart = dataForum.slice(partSize + 1, 2 * partSize + 2 );
-               thirdPart = dataForum.slice(2 * partSize + 2);
+               // secondPart = dataForum.slice(partSize + 1, 2 * partSize + 2 );
+               // thirdPart = dataForum.slice(2 * partSize + 2);
             }
           }
          setFirstPartData(firstPart)
-         setSecondPartData(secondPart)
-         setThirdPartData(thirdPart)
+         // setSecondPartData(secondPart)
+         // setThirdPartData(thirdPart)
       }
    },[dataForum])
     return ( 
@@ -67,7 +67,7 @@ function Forum() {
                          color: "white !important",
                          fontWeight: "bold !important" }, }; }},}}
              >
-                <SubMenu className={cx("dropdown-lable")} icon={<BookMark/>}   label={'Trao đổi khóa luận'} >
+                <SubMenu className={cx("dropdown-lable")} icon={<BookMark/>}   label={''} >
                     { firstPartData.length > 0 && firstPartData.map((item, index) => (
                      <MenuItem key={index} className={cx('dropdown-infor')} component={<Link to={`/forumComment/${item.ForumId}`}/>}>
                         <MailIcon classsName={cx('dropdown-icon')}/>
@@ -77,7 +77,7 @@ function Forum() {
                     ))}
                 </SubMenu>
             </Menu>
-            <Menu 
+            {/* <Menu 
                  menuItemStyles={{
                     button: ({ level }) => {
                       if (level === 0) {
@@ -87,7 +87,7 @@ function Forum() {
                              color: "white !important",
                               }, }; }}, }}
             >
-                <SubMenu className={cx("dropdown-lable")} icon={<BookMark/>}  label={' Chia sẻ kinh nghiệm'} >
+                <SubMenu className={cx("dropdown-lable")} icon={<BookMark/>}  label={''} >
                   {  secondPartData.length > 0 && secondPartData.map((item, index) => (
                         <MenuItem key={index} className={cx('dropdown-infor')} component={<Link to={`/forumComment/${item.ForumId}`}/>}>
                            <MailIcon classsName={cx('dropdown-icon')}/>
@@ -107,7 +107,7 @@ function Forum() {
                              color: "white !important",
                               }, }; }}, }}
             >
-                <SubMenu className={cx("dropdown-lable")} icon={<BookMark/>}  label={'Định hướng nghiên cứu'} >
+                <SubMenu className={cx("dropdown-lable")} icon={<BookMark/>}  label={''} >
                   {  thirdPartData.length > 0 && thirdPartData.map((item, index) => (
                         <MenuItem key={index} className={cx('dropdown-infor')} component={<Link to={`/forumComment/${item.ForumId}`}/>}>
                            <MailIcon classsName={cx('dropdown-icon')}/>
@@ -116,7 +116,7 @@ function Forum() {
                      
                   ))}
                 </SubMenu>
-            </Menu>
+            </Menu> */}
         </div>
      );
 }

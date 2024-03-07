@@ -13,16 +13,24 @@ using System.Text.Json.Serialization;
 var builder = WebApplication.CreateBuilder(args);
 var MyAllowOrigins = "AllowAll";
     // Configure CORS
-builder.Services.AddCors(options =>
+/*builder.Services.AddCors(options =>
 {
-    /*options.AddPolicy("AllowAll",
-        builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());*/
+    *//*options.AddPolicy("AllowAll",
+        builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());*//*
     options.AddPolicy(MyAllowOrigins,
-        builder => builder.WithOrigins("http://localhost:3000")
+        builder => builder.WithOrigins("http://localhost:3002")
                       .AllowAnyHeader()
                       .AllowAnyMethod());
                      
+});*/
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll",
+        builder => builder.AllowAnyOrigin()
+                          .AllowAnyHeader()
+                          .AllowAnyMethod());
 });
+
 // Add services to the container.
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

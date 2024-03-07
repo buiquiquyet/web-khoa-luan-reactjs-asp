@@ -67,7 +67,7 @@ function HomeAdmin() {
   }, [])
   const columns = [
     { title: 'Hình ảnh', dataIndex: 'Image', key: 'Image', render: (text, record) => (
-      <img src={`https://localhost:7225/StaticImages/` + text} alt={`Hình ảnh ${record.key}`} className={cx('table-img')} />
+      <img src={`https://localhost:7225/StaticImages/` + text} alt={`Hình ảnh`} className={cx('table-img')} />
     ), },
     { title: 'Tài Khoản', dataIndex: 'Username', key: 'Username' },
     { title: 'Mật Khẩu', dataIndex: 'Password', key: 'Password' },

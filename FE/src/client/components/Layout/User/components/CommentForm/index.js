@@ -1,6 +1,6 @@
 import classNames from "classnames/bind";
 import styles from './CommentForm.module.scss'
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { NotificationManager, NotificationContainer } from 'react-notifications';
 import * as ServiceCommentApi from './../../../../../apiServieces/CommentApi' 
 import * as ServiceUserApi from './../../../../../apiServieces/UserApi' 
@@ -100,10 +100,10 @@ function CommentForm({idForum, typePost}) {
             NotificationManager.error("Hãy đăng nhập để bình luận", 'Cảnh báo', 1000);
         }  
     }
-    const handleEditComment = (item) => {
+    const handleEditComment = useCallback((item) => {
         setDataEditComment(item)
         modalRef.current.style.display = 'block'
-    }
+    },[])
     const handleSubmitEditComment = async () => {
         const value = dataEditComment.Discriptions
         dataEditComment.Discriptions = dataCommentEdit

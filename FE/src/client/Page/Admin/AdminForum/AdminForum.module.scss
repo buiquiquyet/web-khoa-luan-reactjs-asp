@@ -1,12 +1,13 @@
 .wrapper {
     padding: 20px;
-    background-color: #f4f5f7;
-    height: 100vh;
+    background-color: #46484c;
+    min-height: 100vh;
 }
 .lable {
     margin-bottom: 10px;
     font-size: 2rem;
     font-weight: bold;
+    color: white;
 }
 .table {
     box-shadow: 2px 2px 7px 5px rgba(0, 0, 0, 0.1);
@@ -39,7 +40,7 @@
     height: 40px;
     margin-left: 20px;
     overflow: hidden;
-    background-color: rgba(22, 24, 35, 0.06);
+    background-color: white;
     padding: 0 0 0 12px;
     input:not(:placeholder-shown)~ .search-button {
             color: var(--primary);

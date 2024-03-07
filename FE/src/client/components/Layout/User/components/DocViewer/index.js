@@ -60,7 +60,9 @@ function DocViewerPost({id, url}) {
     return ( 
      <div className={cx('wrapper')}>
         <div className={cx('postIframe')}>
-            <iframe src={pdfUrl} title="pdfFile" 
+            <iframe 
+                src={`${pdfUrl}#toolbar=0`}
+                title="pdfFile" 
                 ref={iframeRef}
                 download="" 
                 allowdownload="false"
