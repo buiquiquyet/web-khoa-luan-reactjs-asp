@@ -76,7 +76,7 @@
     }
 }
 .introduce-img  img {
-    width: 300px;
+    width: 70%;
     height: 200px;
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.3); /* Điều chỉnh màu, kích thước và độ trong suốt của viền mờ */
 
@@ -85,33 +85,6 @@
     margin-top: 10px;
     font-weight: bold;
     font-size: 1.8rem;
-}
-
-// PC
-@media (min-width: 1025px) {
-   
-  }
-//tablet  
-@media (min-width: 769px) and (max-width: 1024px) {
-.introduce-img  img{
-    width: 180px;
-    height: 150px;
-}
-}
-//moblie  
-@media (max-width: 768px) {
-    .introduce-content{
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-    }
-    .introduce-img {
-        margin-bottom: 20px;
-    }
-    .introduce-img  img{
-        width: 60%;
-        height: 150px;
-    }
 }
 //content new 3 data
 .content-news {
@@ -122,7 +95,6 @@
 .news-tab {
     display: flex;
     justify-content: flex-end;
-    border-bottom: 2px solid rgb(75, 73, 73);
     align-items: center;
     position: relative;
     span {
@@ -164,7 +136,6 @@
 .newsAll {
     display: flex;
     border: 2px solid rgb(75, 73, 73);
-    border-top: none;
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.07);
     border-bottom-left-radius: 50px;
 }
@@ -258,3 +229,69 @@
     padding: 8px;
     
 }
+
+// PC
+@media (min-width: 1025px) {
+    .news-info {
+        padding: 40px;
+        margin: 0;
+    }
+}
+//tablet  
+@media (min-width: 769px) and (max-width: 1024px) {
+    .introduce-img  img{
+        width: 100%;
+    }
+    .introduce-img span {
+            
+        font-size: 1.6rem;
+    }
+    .introduce-content {
+        padding: 0;
+    }
+    .content-news {
+        padding: 0 20px;
+    }
+    .newsAll {
+        padding: 40px 10px ;
+        .news-info {
+            padding: 0;
+            margin: 0;
+            border-right: none;
+        }
+    }
+}
+//moblie  
+@media (max-width: 768px) {
+   
+    .introduce-content{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    .introduce-img {
+        margin-bottom: 20px;
+    }
+    .introduce-img  img{
+        width: 300px;
+    }
+    .introduce-text {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .content-news {
+        padding: 0 30px;
+    }
+    .newsAll {
+        padding: 40px 10px ;
+        gap: 24px;
+        .news-info {
+            padding: 0;
+            border: none;
+            margin: 0;
+        }
+    }
+    
+}
+
+

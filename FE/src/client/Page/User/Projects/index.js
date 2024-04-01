@@ -21,26 +21,19 @@ function Projects() {
     const [currentPage, setCurrentPage] = useState(1);
     const inputSearchRef = useRef('')
     const [checkActiveNewsRight, setCheckActiveNewsRight] = useState(true)
-    useEffect(() => {
-        if(type === 'projectsByDeparmentId') {
-            fecthProjectByDeparmentId(urlDepartmentId)
-        }else {
-           
-            fecthProjectGetAll()
-        }
-    }, [type,urlDepartmentId])
+    const [inputSearch, setInputSearch] = useState('')
+    const totalPages = Math.ceil(dataProjects?.length / itemsPerPage) || 0;
 
     const fecthProjectGetAll = async () => {
         const rs = await ServiceProjectListApi.GetAll()
         inputSearchRef.current.value = ''
         setCheckActiveNewsRight(false)
         setDataProject(rs)
-       
     }
     const fecthDeparmentgetDataByNameAndKhoaId  = async (projectName, deparmentId) => {
-        const rs = await ServiceProjectListApi.GetDataByNameAndKhoaId(projectName, deparmentId)
+        // const rs = await ServiceProjectListApi.GetDataByNameAndKhoaId(projectName, deparmentId)
         
-        setDataProject(rs)
+        // setDataProject(rs)
     }
     const fecthProjectByDeparmentId = async (deparmentId)  => {
         const rs = await ServiceProjectListApi.GetByDepartmentId(deparmentId)
@@ -48,6 +41,7 @@ function Projects() {
         setCheckActiveNewsRight(true)
         setDataProject(rs)
     }
+    console.log(dataProjects);
     const fecthProjectGetByName = async (name) => {
         const rs = await ServiceProjectListApi.GetByName(name)
         if(rs) {
@@ -62,11 +56,15 @@ function Projects() {
     const renderProject = (item, index) => (
         <Link to={`/projectPost/${item.ProjectListId}/${item.UserName}`} key={index} className={cx('content-project')}>
             <span className={cx("project-lable")}>{item.Name}</span>
-            <div className={cx("comment-dateUser")}>
-                <div className={cx("comment-date")}><DateIcon  classsName={cx('comment-icon')} /><span >{new Date(item.CreatedDate).toLocaleDateString()}</span></div>
-                <div className={cx('comment-user')} ><UserIcon classsName={cx('comment-icon')} /><span>{item.UserName}</span></div>
-                <div className={cx('comment-user')} ><EyeIcon classsName={cx('comment-icon')} /><span>{item?.Watched || 0}</span></div>
-                <div className={cx('comment-user')} ><DowIcon classsName={cx('comment-icon')} /><span>{item?.Download || 0}</span></div>
+            <div className={cx("comment-dateUser",'row')}>
+                <div  className="row col-12 col-md-4">
+                    <div className={cx("comment-date",'col-4')}><DateIcon  classsName={cx('comment-icon')} /><span style={{marginTop: '3px'}} >{new Date(item.CreatedDate).toLocaleDateString()}</span></div>
+                    <div className={cx('comment-user','col-8')} ><UserIcon classsName={cx('comment-icon')} /><span style={{marginTop: '3px'}}>{item.UserName}</span></div>
+                </div>
+                <div className="row col-12 col-md-4">
+                    <div className={cx('comment-user','col-2')} ><EyeIcon classsName={cx('comment-icon')} /><span style={{marginTop: '3px'}}>{item?.Watched || 0}</span></div>
+                    <div className={cx('comment-user','col-8')} ><DowIcon classsName={cx('comment-icon')} /><span style={{marginTop: '3px'}}>{item?.Download || 0}</span></div>
+                </div>
             </div>
             <div className={cx('project-post')}>
                 <img src={postImg} alt="img" />
@@ -77,7 +75,6 @@ function Projects() {
             </div>
         </Link>
     );
-    const totalPages = Math.ceil(dataProjects?.length / itemsPerPage) || 0;
     const handleSearch = async () => {
         if(inputSearchRef.current.value === '') {
           NotificationManager.warning("Hãy nhập tên tìm kiếm", 'Cảnh báo', 1000);
@@ -88,20 +85,35 @@ function Projects() {
         }else {
             await fecthProjectGetByName(inputSearchRef.current.value)
         }
-       
     }
+    const handleChangeInputSearch =  e => {
+
+    }
+    useEffect(() => {
+        if(type === 'projectsByDeparmentId') {
+            fecthProjectByDeparmentId(urlDepartmentId)
+        }else {
+           
+            fecthProjectGetAll()
+        }
+    }, [type,urlDepartmentId])
     return (
-        <div className={cx('wrapper')}>
+        <div className={cx('wrapper','row')} style={{margin:'30px 0'}}>
             <NotificationContainer/>
-            <div style={{width:'80%'}}>
-                <div className={cx('app')}>
-                    <div className={cx('app-lable')}>
+            <div  className={cx('nav','row col-12 col-md-9')}>
+                <div className={cx('app','row')}>
+                    <div className={cx('app-lable','col-12 p-0 col-lg-5')}>
                         {type === 'projectsByDeparmentId'  &&
                             departmentName
                         }
                     </div>
-                    <div className={cx('nav-search')}>
-                        <input ref={inputSearchRef} type="text" placeholder="Search..." />
+                    <div className={cx('nav-search','col-12 col-md-4 p-0')} style={{width:'324px'}}>
+                        <input 
+                            ref={inputSearchRef}
+                            value={inputSearch} 
+                            type="text" placeholder="Search..."
+                            onChange={handleChangeInputSearch}
+                        />
                         <button onClick={handleSearch} className={cx('nav-buttonSearch')}><SearchIcon/></button>
                     </div>
                 </div>
@@ -135,10 +147,12 @@ function Projects() {
                         </div>
                     }
                 </div>
-                {dataProjects.length === 0 && <div className={cx('showInfoNoData')}>Không có dữ liệu</div> }
+                {dataProjects.length === 0 && <div className={cx('showInfoNoData')}>Không có dữ liệu khóa luận {departmentName}!</div> }
             </div>
            
-            <ProjectNewsRight checkActiveNewsRight= {checkActiveNewsRight}  />
+            <div className="col-12 col-md-3 p-0 mt-4">
+                <ProjectNewsRight checkActiveNewsRight= {checkActiveNewsRight}  />
+            </div>
         </div>
     );
 }

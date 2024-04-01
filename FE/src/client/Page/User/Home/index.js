@@ -87,16 +87,16 @@ function Home() {
                     <h3>GIỚI THIỆU</h3>
                     <span>Website khóa luận tốt nghiệp và diễn đàn trao đổi cho sinh viên </span>
                 </div>
-                <div className={cx('introduce-content')}>
-                    <Link to={'/forum'} className={cx('introduce-img')} >
+                <div className={cx('introduce-content','row')}>
+                    <Link to={'/forum'} className={cx('introduce-img','col-12 col-md-4')} >
                         <img src={intro1Img} alt=""/>
                         <span>Trao đổi thông tin</span>
                     </Link>
-                    <Link to={'/forum'} className={cx('introduce-img')}>
+                    <Link to={'/forum'} className={cx('introduce-img','col-12 col-md-4')}>
                         <img src={intro2Img} alt=""/>
                         <span>Chia sẻ kinh nghiệm</span>
                     </Link>
-                    <Link to={'/forum'} className={cx('introduce-img')}>
+                    <Link to={'/forum'} className={cx('introduce-img','col-12 col-md-4')}>
                         <img src={intro3Img} alt=""/>
                         <span>Định hướng nghiên cứu</span>
                     </Link>
@@ -109,7 +109,7 @@ function Home() {
                         <div className={cx('news-tabLabel')}><h2>Xem nhiều nhất</h2></div>
                         <Link  to={'/projects'} className={cx('news-tabAll')}>Xem tất cả</Link>
                     </div>
-                    <div className={cx('newsAll')}>
+                    <div className={cx('newsAll','row')}>
                         {
                             watchDataBig && watchDataBig.length > 0 && 
                             watchDataBig.map((item, index) => (
@@ -123,7 +123,10 @@ function Home() {
                                     arrow={true}
                                     className={cx('customTippy')} 
                                 >
-                                    <Link key={index}  to={`/projectPost/${item.ProjectListId}/${item.UserName}`} className={cx('news-info')}>
+                                    <Link key={index}  
+                                        to={`/projectPost/${item.ProjectListId}/${item.UserName}`} 
+                                        className={cx('news-info','col-12 col-lg-4 ')}
+                                    >
                                         <div className={cx('news-left')}>
                                             <img src={postImg} alt="img"/>
                                         </div>
@@ -160,7 +163,7 @@ function Home() {
                         <div className={cx('news-tabLabel')}><h2>Tải nhiều nhất</h2></div>
                         <Link  to={'/projects'} className={cx('news-tabAll')}>Xem tất cả</Link>
                     </div>
-                    <div className={cx('newsAll')}>
+                    <div className={cx('newsAll','row')}>
                         {
                             downloadDataBig && downloadDataBig.length > 0 && 
                             downloadDataBig.map((item, index) => (
@@ -172,7 +175,10 @@ function Home() {
                                         }  
                                     arrow={true}
                                 >
-                                    <Link key={index}  to={`/projectPost/${item.ProjectListId}/${item.UserName}`} className={cx('news-info')}>
+                                    <Link key={index}  
+                                        to={`/projectPost/${item.ProjectListId}/${item.UserName}`} 
+                                        className={cx('news-info','col-12 col-lg-4 ')}
+                                    >
                                         <div className={cx('news-left')}>
                                             <img src={postImg} alt="img"/>
                                         </div>

@@ -42,7 +42,7 @@ function ProjectNews({ checkActiveNewsRight }) {
             <div className={cx('news-lable')}>
                 Khóa luận các khoa
             </div>
-            <ul className={cx('news-nav')}>
+            <ul className={cx('news-nav','nav-department','p-0')}>
                 {dataDeparment && dataDeparment.length > 0 &&
                 dataDeparment.map((item, index) => (
                     <Link key={index} to={(`/projects/${item.DepartmentId}/${item.Name}`)} 
@@ -57,12 +57,12 @@ function ProjectNews({ checkActiveNewsRight }) {
         </div>
         <div  className={cx('news-department')}>
             <div className={cx('news-lable')}>Xem nhiều nhất</div>
-            <ul className={cx('news-nav')}>
+            <ul className={cx('news-nav','p-0')}>
                 {watchDataBig && watchDataBig.length > 0 &&  watchDataBig.map((item, index) => (
                     <Link to={`/projectPost/${item.ProjectListId}/${item.UserName}`} key={index} className={cx('nav-item')}>
                         <div className={cx('commnet-title')}>{item.Name}</div>
                         <div className={cx("comment-dateUser")}>
-                            <div className={cx('comment-user')} style={{flex: '1'}} ><UserIcon classsName={cx('comment-icon')}/><span>{item.UserName}</span></div>
+                            <div className={cx('comment-user')} ><UserIcon classsName={cx('comment-icon')}/><span>{item.UserName}</span></div>
                             <div className={cx('comment-user')} ><EyeIcon classsName={cx('comment-icon')}/><span>{item.Watched}</span></div>
                             <div className={cx('comment-user')} ><DowIcon classsName={cx('comment-icon')}/><span>{item.Download}</span></div>
                         </div>
@@ -73,12 +73,12 @@ function ProjectNews({ checkActiveNewsRight }) {
         </div>
         <div  className={cx('news-department')}>
             <div className={cx('news-lable')}>Tải nhiều nhất</div>
-            <ul className={cx('news-nav')}>
+            <ul className={cx('news-nav','p-0')}>
                 {downloadDataBig && downloadDataBig.length > 0 &&  downloadDataBig.map((item, index) => (
                     <Link to={`/projectPost/${item.ProjectListId}/${item.UserName}`} key={index} className={cx('nav-item')}>
                         <div className={cx('commnet-title')}>{item.Name}</div>
                         <div className={cx("comment-dateUser")}>
-                            <div className={cx('comment-user')} style={{flex: '1'}} ><UserIcon classsName={cx('comment-icon')}/><span>{item.UserName}</span></div>
+                            <div className={cx('comment-user')} ><UserIcon classsName={cx('comment-icon')}/><span>{item.UserName}</span></div>
                             <div className={cx('comment-user')} ><EyeIcon classsName={cx('comment-icon')}/><span>{item.Watched}</span></div>
                             <div className={cx('comment-user')} ><DowIcon classsName={cx('comment-icon')}/><span>{item.Download}</span></div>
                         </div>

@@ -350,4 +350,16 @@ export const SendIcon = ({ width = '2rem', height = '2rem', classsName }) => (
   <path d="M2 21l21-9L2 3v7l15 2-15 2v7z" />
   </svg>
 )
+export const BarIcon1 = ({ width = '2rem', height = '2rem', classsName }) => (
+  <svg
+  viewBox="0 0 448 512"
+  fill="currentColor"
+  height={height}
+  width={width}
+  className={classsName}
+  >
+  <path d="M0 96c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm0 160c0-17.7 14.3-32 32-32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zm448 160c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32h384c17.7 0 32 14.3 32 32z" />
+  </svg>
+  
+)
 

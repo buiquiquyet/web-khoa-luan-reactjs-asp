@@ -7,30 +7,41 @@
     flex-direction: column;
     justify-content: space-around;
     background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
-.row {
+.rowHeader {
     display: flex;
-    padding: 20px ;
-    justify-content: space-between;
+    padding: 20px 0 ;
+    margin: 0;
+}
+.div-img {
+    height: 152px;
 }
 .header-logo {
-    width: 120px;
-    height: 120px;
+    background-image: url(../../../../../Image/logo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    height: 144px;
+    width: 120px I !important;
+    background-position: center;
+    
 }
 .header-content {
     display: flex;
     align-items: center;
     font-weight: bold;
     color: #ff1a1a !important;
-    margin-right: 286px;
 }
 .header-text {
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
     
 }
 .header-textMain{
+    display: flex;
     font-size: 2.8rem;
     
 }
@@ -38,6 +49,8 @@
     font-size: 2.4rem;
 }
 .header-login {
+    display: flex;
+    justify-content: flex-end;
     font-size: 2rem;
     
 }
@@ -114,11 +127,13 @@
 }
 //log out
 .log-out {
+    min-width: 158px;
     display: flex;
+    height: 20px;
     align-items: center;
     background-color: var(--primary);
     color: white;
-    padding: 4px 10px;
+    padding: 14px 10px;
     border-radius: 10px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
     .logOut-div {
@@ -126,6 +141,8 @@
         align-items: center;
     }
     .user {
+        min-width: 120px;
+        gap: 4px;
         display: flex;
         align-items: center;
         font-weight: 600;
@@ -139,4 +156,26 @@
             scale: 1.2;
         }
     }
+}
+@media only screen and (max-width: 767px) {
+    .header-text {
+        justify-content: center;
+        align-items: center;
+        span {
+            text-align: center;
+        }
+        .header-textMain {
+            text-align: center;
+        }
+    }
+    .div-img {
+        display: none;
+    }
+    .rowHeader {
+        margin: 0;
+    }
+   
+   
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px)  {
 }

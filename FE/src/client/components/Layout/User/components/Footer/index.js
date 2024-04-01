@@ -6,8 +6,8 @@ import { LocationIcon, PhoneIcon, WorldIcon,EmailIcon, FaxIcon } from '../../../
 const cx = classNames.bind(styles)
 function Footer() {
     return ( 
-        <footer className={cx('footer')}>
-            <div className={cx('footer-content')}>
+        <footer className={cx('footer','container-fluid row')} style={{padding:'20px 40px'}}>
+            <div className={cx('footer-content','col-12 col-lg-9')}>
                 <span className={cx('footer-text')}>
                     TRƯỜNG ĐẠI HỌC SAO ĐỎ
                 </span>
@@ -28,7 +28,7 @@ function Footer() {
                   <WorldIcon classsName={cx('footer-icon')}/>  Website: http://saodo.edu.vn
                 </span>
             </div>
-            <div className={cx('footer-social')}>
+            <div className={cx('footer-social','col-12 col-lg-3')}>
                 <span>MẠNG XÃ HỘI</span>
                 <div className={cx('socaial-item')}>
                     <a href="https://www.facebook.com/TruongDHSaoDo"><img src={facebook} alt=""/></a>

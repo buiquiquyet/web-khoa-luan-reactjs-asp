@@ -1,13 +1,14 @@
 import classNames from "classnames/bind";
 import styles from './Header.module.scss';
 import NavMenu from "./NavMenu";
-import Image from '../../../../../Image/logo.png'
 import { UserIcon } from "../../../../../Icon";
 import { useRef } from "react";
 import * as ServiceUser from './../../../../../apiServieces/UserApi'
 import { NotificationContainer, NotificationManager } from 'react-notifications';
 import { SignOutIcon } from "../../../../../Icon";
 import { Link } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 const cx = classNames.bind(styles)
 function Header() {
     const model = useRef()
@@ -68,15 +69,17 @@ function Header() {
         </div> 
         <header className={cx('header')}>
             <NotificationContainer/>
-            <div className={cx('row')}>
-                <Link to={'/'} className={cx('header-content')}>
-                    <img src={Image} className={cx('header-logo')} alt="img"/>
-                    <div className={cx('header-text')}>
+            <div className={cx('rowHeader','row container-fluid')}>
+                <Link to={'/'} className={cx('header-content','col-12 col-lg-9 row')}>
+                    <div className={cx('div-img',' col-12 col-md-2 ')} style={{width:'150px'}} >
+                        <div className={cx('header-logo')}></div>
+                    </div>
+                    <div className={cx('header-text','col-12 col-md-9')}>
                         <span className={cx('header-textMain')}>CỔNG TRAO ĐỔI KHÓA LUẬN TỐT NGHIỆP</span>
                         <span className={cx('header-textSm')}>Trường đại học Sao Đỏ</span>
                     </div>
                 </Link>
-                <div className={cx('header-login')}  >
+                <div className={cx('header-login','col-12 col-lg-3 mt-4')}  >
                     {localStorage.getItem('statusLogin') === 'login' ? 
                     <div className={cx('log-out')}>
                         <Link to={'/userInfo'}  className={cx('user')}><UserIcon width="1.5rem"/>{localStorage.getItem('name')}</Link> 

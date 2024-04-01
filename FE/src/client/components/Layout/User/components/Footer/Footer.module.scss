@@ -3,6 +3,7 @@
     background-color: #102d4c;
     display: flex;
     padding: 20px 50px;
+    align-self: center;
 }
 .footer-text {
     font-weight: bold;
@@ -46,4 +47,14 @@
 }
 .footer-icon {
     margin-right: 5px;
+}
+
+@media (max-width: 990px) {
+    .footer-content{
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .footer-infor {
+        text-align: center;
+    }
 }
