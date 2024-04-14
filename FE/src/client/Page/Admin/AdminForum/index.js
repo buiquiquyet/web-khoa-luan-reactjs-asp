@@ -37,7 +37,7 @@ function AdminForum() {
       }
     const fecthCommentDelByPostTypeAndIdArr = async (option, type) => {
       const rs = await ServiecesCommentApi.DeleteByPostTypeAndIdArr(option, type)
-      if(rs !== 'underfined' && rs.length > 0) {
+      if(rs !== 'underfined' && rs?.length > 0) {
         setCommentIdArr(() => {
           return rs.map(item => item.CommentId)
         }) 

@@ -10,6 +10,9 @@
     padding-right: 30px;
     width: 100%;
 }
+.app {
+    width: 300px;
+}
 .function {
     margin-bottom: 15px;
     display: flex
@@ -30,7 +33,6 @@
     border-bottom: 1px solid var(--boder-color);
     padding: 25px 0;
     justify-content: space-between;
-    width: 80%;
 }
 .form-left {
     display: flex;
@@ -127,6 +129,9 @@
     justify-content: center;
 
 }
+.fuction-btn {
+    display: flex;
+}
  /* search */
  .nav-search{
     display: flex;
@@ -152,7 +157,10 @@
         background-color: #e1dcdc;
     }
 }
-
+.commnet-div {
+    display: flex;
+    align-items: center;
+}
 .nav-buttonSearch:active  {
     cursor: pointer;
     filter: brightness(80%);
@@ -163,3 +171,61 @@
     justify-content: center;
     font-size: 2rem;
 }
+@media only screen and (max-width: 520px) {
+    .app {
+        width: 100% !important;
+    }
+     
+ }
+ @media only screen and (max-width: 600px) {
+    .comment-dateUser {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .project-lable {
+        font-size: 1.6rem !important;
+    }
+     
+ }
+@media only screen and (max-width: 720px) {
+    
+}
+ @media only screen and (max-width: 767px) {
+    .wrapper {
+        padding:  0 10px;
+    }
+    .function {
+        flex-direction: column;
+        gap: 10px;
+        
+    }
+    .app {
+        width: 50%;
+    }
+    .project-lable {
+        font-size: 1.8rem;
+    }
+    .content-project {
+        margin: 0 10px;
+    }
+    .content {
+        padding: 0
+    }
+ }
+ @media only screen and (min-width: 768px) and (max-width: 1024px)  {
+    .wrapper {
+        padding:  0 10px;
+    }
+    .app {
+        width: 50%;
+    }
+    .content {
+        padding: 0
+    }
+    .content-project {
+        margin: 0 10px;
+    }
+ }
+ @media (min-width: 1024px) {
+    
+ }

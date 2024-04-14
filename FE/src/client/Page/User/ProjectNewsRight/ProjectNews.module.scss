@@ -125,9 +125,13 @@
         flex-direction: column  !important
     }
 }
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+@media only screen and (min-width: 768px) and (max-width: 990px)  {
     .news-lable {
         text-align: center;
+    }
+    .content-right {
+        border: none;
+        padding: 0;
     }
 }
 @media (min-width: 1024px) {

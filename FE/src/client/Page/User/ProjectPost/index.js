@@ -45,22 +45,24 @@ function ProjectPost() {
         fecthProjectGetById(projectId)
     }, [projectId])
     return (
-        <div className={cx('wrapper')}>
+        <div className={cx('wrapper','row container-fluid ')}>
           
             {dataProject && 
-            <div className={cx('content-left')}>
+            <div className={cx('content-left col-12 col-lg-9 p-0 ')}>
                 
                 <div className={cx("project-lable")}>{dataProject.Name}</div>
-                <div className={cx('post-text')} dangerouslySetInnerHTML={{ __html: dataProject.Discriptions }} />
-                <div >
+                <div className={cx('post-text','p-4 pt-0 pb-0')} dangerouslySetInnerHTML={{ __html: dataProject.Discriptions }} />
+                <div  >
                     <DocViewerPost url={dataProject.Image}  id={projectId}/>
                 </div>
                 <ProjectContext.Provider value={userName}>
                     <CommentForm  idForum = {projectId}  typePost={type}/>
-                </ProjectContext.Provider>
+                </ProjectContext.Provider >
             </div>
             }
-            <ProjectNewsRight/> 
+            <div className="col-12 col-lg-3">
+              <ProjectNewsRight/> 
+            </div>
         </div>
      );
 }

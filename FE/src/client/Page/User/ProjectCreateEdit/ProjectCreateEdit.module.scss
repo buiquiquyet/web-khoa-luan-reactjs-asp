@@ -50,7 +50,7 @@
     padding: 20px;
 }
 .form-select{
-    width: 20% !important;
+    width: 20% ;
     border: 1px solid black;
     border-radius: 7px;
     height: 45px;
@@ -105,3 +105,28 @@
       background-color: #2980b9;
     }
   }
+@media only screen and (max-width: 520px) {
+   
+ }
+ @media only screen and (max-width: 600px) {
+   
+     
+ }
+@media only screen and (max-width: 720px) {
+    
+}
+ @media only screen and (max-width: 767px) {
+    .select-box {
+        span {
+            width: 20%;
+        }
+        .form-select, .upload-input {
+            width: 50% !important ;
+        }
+    }
+ }
+ @media only screen and (max-width: 800px)  {
+    .upload-select {
+        margin-top: 60px;
+    }
+ }

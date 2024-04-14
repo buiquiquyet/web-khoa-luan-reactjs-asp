@@ -21,14 +21,15 @@ function Projects() {
     const [currentPage, setCurrentPage] = useState(1);
     const inputSearchRef = useRef('')
     const [checkActiveNewsRight, setCheckActiveNewsRight] = useState(true)
-    const [inputSearch, setInputSearch] = useState('')
     const totalPages = Math.ceil(dataProjects?.length / itemsPerPage) || 0;
+    
 
     const fecthProjectGetAll = async () => {
         const rs = await ServiceProjectListApi.GetAll()
         inputSearchRef.current.value = ''
         setCheckActiveNewsRight(false)
         setDataProject(rs)
+       
     }
     const fecthDeparmentgetDataByNameAndKhoaId  = async (projectName, deparmentId) => {
         // const rs = await ServiceProjectListApi.GetDataByNameAndKhoaId(projectName, deparmentId)
@@ -41,7 +42,6 @@ function Projects() {
         setCheckActiveNewsRight(true)
         setDataProject(rs)
     }
-    console.log(dataProjects);
     const fecthProjectGetByName = async (name) => {
         const rs = await ServiceProjectListApi.GetByName(name)
         if(rs) {
@@ -85,8 +85,9 @@ function Projects() {
         }else {
             await fecthProjectGetByName(inputSearchRef.current.value)
         }
+       
     }
-    const handleChangeInputSearch =  e => {
+    const handleChangeInputSearch = e => {
 
     }
     useEffect(() => {
@@ -110,7 +111,6 @@ function Projects() {
                     <div className={cx('nav-search','col-12 col-md-4 p-0')} style={{width:'324px'}}>
                         <input 
                             ref={inputSearchRef}
-                            value={inputSearch} 
                             type="text" placeholder="Search..."
                             onChange={handleChangeInputSearch}
                         />

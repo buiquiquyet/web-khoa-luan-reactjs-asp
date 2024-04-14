@@ -106,7 +106,8 @@
         padding: 0;
     }
     .nav-item {
-        font-size: 1.3rem !important;
+        font-size: 1.5rem !important;
+        font-weight: 100 I !important;
     }
     .nav-item {
         text-align: center;
@@ -155,12 +156,15 @@
         .nav-item {
             height: 0;
             padding: 30px;
-            font-weight: bold;
             color: black;
             width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
+            border-bottom: 1px solid #ccc;
+            &:hover {
+                color: white;
+            }
         }
         .selected {
             background-color: var(--color-hover);

@@ -96,14 +96,16 @@ function Projects() {
           <NotificationContainer/>
             <div className={cx('content')}>
                 <div className={cx('function')} >
-                    <Button onClick={handleDelProject} className={cx('function-button')} type="primary" disabled={checklist && !checklist.length > 0} style={{backgroundColor:'red'}} >Xóa</Button>
-                    <Link to={'/projectCreateEdit'}><Button className={cx('function-button')} type="primary">Thêm mới</Button></Link>
-                    <div className={cx('app')}>
-                    <div className={cx('nav-search')}>
-                        <input ref={inputSearchRef} type="text" placeholder="Search..." />
-                        <button onClick={handleSearch} className={cx('nav-buttonSearch')}><SearchIcon/></button>
+                    <div className={cx('fuction-btn')}>
+                      <Button onClick={handleDelProject} className={cx('function-button')} type="primary" disabled={checklist && !checklist.length > 0} style={{backgroundColor:'red'}} >Xóa</Button>
+                      <Link to={'/projectCreateEdit'}><Button className={cx('function-button')} type="primary">Thêm mới</Button></Link>
                     </div>
-                </div>
+                    <div className={cx('app')}>
+                      <div className={cx('nav-search')} >
+                          <input ref={inputSearchRef} type="text" placeholder="Search..." />
+                          <button onClick={handleSearch} className={cx('nav-buttonSearch')}><SearchIcon/></button>
+                      </div>
+                    </div>
                 </div>
                 <div>
                   <Checkbox className={cx('check-icon check-all')}
@@ -122,15 +124,19 @@ function Projects() {
                       <Link to={`/projectCreateEdit/${item.ProjectListId}`} className={cx('content-project')}>
                         <span className={cx("project-lable")}>{item.Name}</span>
                         <div className={cx("comment-dateUser")}>
-                            <div className={cx("comment-date")}><DateIcon classsName={cx('comment-icon')}/><span>{new Date(item.CreatedDate).toLocaleDateString()}</span></div>
-                            <div className={cx('comment-user')} ><UserIcon classsName={cx('comment-icon')}/><span>{localStorage.getItem('name')}</span></div>
-                            <div className={cx('comment-user')} ><EyeIcon classsName={cx('comment-icon')}/><span>{item.Watched}</span></div>
-                            <div className={cx('comment-user')} ><DowIcon classsName={cx('comment-icon')}/><span>{item.Download}</span></div>
-                            <div className={cx('comment-checkAdmin')}>
-                                {item.CheckAdmin === 0 ? <span>Chờ duyệt</span>
-                                : item.CheckAdmin === 1 ? <div className={cx('checkAdmin-comfirm')} style={{color:"green"}}><CheckIcon width="1.5rem" /> <span style={{marginLeft:"3px"}}>Đã duyệt</span></div>
-                                  : <span style={{color:"red"}}>Không duyệt</span>
-                                }
+                            <div className={cx('commnet-div')}>
+                              <div className={cx("comment-date")}><DateIcon classsName={cx('comment-icon')}/><span>{new Date(item.CreatedDate).toLocaleDateString()}</span></div>
+                              <div className={cx('comment-user')} ><UserIcon classsName={cx('comment-icon')}/><span>{localStorage.getItem('name')}</span></div>
+                            </div>
+                            <div className={cx('commnet-div')}>
+                              <div className={cx('comment-user')} ><EyeIcon classsName={cx('comment-icon')}/><span>{item.Watched}</span></div>
+                              <div className={cx('comment-user')} ><DowIcon classsName={cx('comment-icon')}/><span>{item.Download}</span></div>
+                              <div className={cx('comment-checkAdmin')}>
+                                  {item.CheckAdmin === 0 ? <span>Chờ duyệt</span>
+                                  : item.CheckAdmin === 1 ? <div className={cx('checkAdmin-comfirm')} style={{color:"green"}}><CheckIcon width="1.5rem" /> <span style={{marginLeft:"3px"}}>Đã duyệt</span></div>
+                                    : <span style={{color:"red"}}>Không duyệt</span>
+                                  }
+                              </div>
                             </div>
                         </div>
                         <div className={cx('project-post')}>

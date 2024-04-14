@@ -114,3 +114,23 @@
         display: none;
     }
 }
+
+@media only screen and (max-width: 767px) {
+    .comment-import, .comment-show {
+        width: 100%;
+    }
+    .modal-content {
+        width: 80%;
+
+    }
+   
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+   .comment-import,.comment-show {
+        width: 70%;
+   }
+   .modal-content {
+    width: 70%;
+
+}
+}
