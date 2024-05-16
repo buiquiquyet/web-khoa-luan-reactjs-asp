@@ -19,6 +19,7 @@ function AdminLogin() {
             const rs = await ServiceUser.GetByUserName(inputUser.current.value, inputPass.current.value)
                 if(rs) {
                     if(rs.UserGroup === 'ADMIN'){
+                        localStorage.setItem("adminLogin", "login")
                         window.location.href = '/admin';
                     }else {
                         warning.current.innerHTML = 'Tên truy cập hoặc mật khẩu không chính xác'

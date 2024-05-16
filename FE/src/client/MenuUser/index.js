@@ -5,7 +5,9 @@ import {  SignOutIcon } from "./../Icon";
 
 const cx = classNames.bind(styles)
 function MenuUser() {
-   
+    const handleLogOutAdmin = () => {
+        localStorage.removeItem("adminLogin")
+    }
     return ( 
         <div to={''} className={cx('wrapper')} > 
             <div className={cx('content')}>
@@ -21,7 +23,7 @@ function MenuUser() {
                     <UserIcon/>
                     <span className={cx('item-text')}>Cá nhân</span>
                 </Link> */}
-                <Link to={'/adminLogin'} className={cx('item')} href="/">
+                <Link to={'/adminLogin'} onClick={handleLogOutAdmin} className={cx('item')} href="/">
                     <SignOutIcon classsName={'icon'}/>
                     <span  className={cx('item-text')}>Thoát</span>
                 </Link>

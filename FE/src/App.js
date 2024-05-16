@@ -1,10 +1,16 @@
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
 import { publicRouter } from "./client/router";
-import React from 'react';
+import React from "react";
 
 export const MyContext = React.createContext();
 
 function App() {
+  
   return (
     <Router>
       <Routes>
@@ -16,7 +22,7 @@ function App() {
               key={index}
               path={item.path}
               element={
-                item.type === 'adminLogin' ? (
+                item.type === "adminLogin" ? (
                   <Page />
                 ) : (
                   <MyContext.Provider value={item.type}>

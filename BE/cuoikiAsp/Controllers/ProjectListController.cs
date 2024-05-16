@@ -155,7 +155,7 @@ namespace cuoikiAsp.Controllers
 
             return Ok(user);
         }
-        [HttpGet("getByUserIdAndName/{userId} {name}")]
+        [HttpGet("getByUserIdAndName/{userId}/{name}")]
         public async Task<ActionResult<ProjectList>> GetByUserIdAndName(int userId, string name)
         {
             var user = await _resp.getByUserIDAndName(userId,name);

@@ -53,7 +53,7 @@ export const GetByName = async (name) => {
 }
 export const GetByUserIdAndName = async (useId,name) => {
         try {
-                const res = await request.get(`/ProjectList/getByUserIdAndName/${useId} ${name}`)
+                const res = await request.get(`/ProjectList/getByUserIdAndName/${useId}/${name}`)
                 return res
        } catch (error) {
                 console.log(error)

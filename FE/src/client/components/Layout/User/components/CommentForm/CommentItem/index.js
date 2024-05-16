@@ -275,7 +275,6 @@ function CommentItem({  onEditComment, visibleItems, dataComment, fecthCommentAp
         fecthAllEvaluate()
         fecthGetCommnetByTypePostCommentIdotherNull(typePost, idForum)
     },[typePost, idForum])
-    console.log(1);
     return ( 
       <div>
           {dataComment  && dataComment.slice(0, visibleItems).map((item, index) =>    
