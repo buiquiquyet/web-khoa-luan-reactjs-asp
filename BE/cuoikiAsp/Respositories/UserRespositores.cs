@@ -66,23 +66,31 @@ namespace cuoikiAsp.Respositories
         {
             try
             {
-                var fileName = await SaveFileAsync(newUser.ImageFile);
+                string fileName;
+                try
+                {
+                    fileName = await SaveFileAsync(newUser.ImageFile);
+                }
+                catch (Exception ex)
+                {
+                    fileName = ""; 
+                }
                 var UserToAdd = new User
                 {
-                    Username = newUser.Username,
-                    Password = newUser.Password,
-                    UserGroup = newUser.UserGroup,
-                    PhoneNumber = newUser.PhoneNumber,
-                    Address = newUser.Address,
-                    Name = newUser.Name,
-                    Email = newUser.Email,
-                    DateOfBirth = newUser.DateOfBirth,
-                    Sex = newUser.Sex,
+                    Username = newUser.Username ,
+                    Password = newUser.Password ?? "",
+                    UserGroup = newUser.UserGroup ?? "",
+                    PhoneNumber = newUser.PhoneNumber ?? "",
+                    Address = newUser.Address ?? "",
+                    Name = newUser.Name ,
+                    Email = newUser.Email ?? "",
+                    DateOfBirth = newUser.DateOfBirth ,
+                    Sex = newUser.Sex ?? "" ,
                     checkComment = newUser.checkComment ?? 0,
-                    ClassId = newUser.ClassId,
+                    ClassId = newUser.ClassId ,
                     DepartmentId = newUser.DepartmentId,
                     SpecializedId = newUser.SpecializedId,
-                    Image = fileName
+                    Image = fileName 
 
                 };
                  _context.Users.Add(UserToAdd);

@@ -54,7 +54,6 @@
         }
     }
     .evaluate-iconLast {
-        margin-top: 3.5px;
         color: blue;
         &:hover {
             cursor: pointer;
@@ -70,6 +69,7 @@
     align-items: center;
 }
 .count-evaluate {
+    margin-top: 2px;
     &:hover {
         cursor: pointer;
     }

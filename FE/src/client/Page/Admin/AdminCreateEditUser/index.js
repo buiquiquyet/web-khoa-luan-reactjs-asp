@@ -240,16 +240,13 @@ function AdminCreateEditUser() {
     formData.append("UserGroup", chucvu);
     formData.append("Sex", sex);
     formData.append("ImageFile", imgUrl.imgFile);
-    for (let pair of formData.entries()) {
-      const [key, value] = pair;
-      if (
-        value === "" ||
-        value === UserImg ||
-        (Array.isArray(value) && value.length === 0) ||
-        value === null
-      ) {
-        isEmptyField = true;
-      }
+
+    if (
+      fullnameRef.current?.value === "" ||
+      usenameRef.current?.value === "" ||
+      passwordRef.current?.value === ""
+    ) {
+      isEmptyField = true;
     }
     if (isEmptyField) {
       NotificationManager.warning(

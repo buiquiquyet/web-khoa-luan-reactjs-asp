@@ -11,7 +11,7 @@ namespace cuoikiAsp.DTO
         public int? DepartmentId { get; set; }
         public int? ClassId { get; set; }
         public int? SpecializedId { get; set; }
-        public string Name { get; set; } = null!;
+        public string? Name { get; set; } = null!;
         public string? PhoneNumber { get; set; }
         public string Email { get; set; } = null!;
         public string? Address { get; set; }

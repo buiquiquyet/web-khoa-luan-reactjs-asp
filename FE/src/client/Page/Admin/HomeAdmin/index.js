@@ -12,6 +12,7 @@ import {
   NotificationContainer,
 } from "react-notifications";
 import { useRef } from "react";
+import UserImg from "./../../../Image/user.png"
 const cx = classNames.bind(styles);
 
 function HomeAdmin() {
@@ -124,7 +125,7 @@ function HomeAdmin() {
       width:"6%",
       render: (text, record) => (
         <img
-          src={`https://localhost:7225/StaticImages/` + text}
+          src={text ? `https://localhost:7225/StaticImages/` + text : UserImg}
           alt={`Hình ảnh`}
           className={cx("table-img")}
         />
