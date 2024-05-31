@@ -1,0 +1,133 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Git Uploads\\web-khoa-luan-reactjs-asp\\BE\\cuoikiAsp\\wwwroot\\asset-manifest.json",
+      "PackagePath": "staticwebassets\\asset-manifest.json"
+    },
+    {
+      "Id": "D:\\Git Uploads\\web-khoa-luan-reactjs-asp\\BE\\cuoikiAsp\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Git Uploads\\web-khoa-luan-reactjs-asp\\BE\\cuoikiAsp\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "D:\\Git Uploads\\web-khoa-luan-reactjs-asp\\BE\\cuoikiAsp\\wwwroot\\manifest.json",
+      "PackagePath": "staticwebassets\\manifest.json"
+    },
+    {
+      "Id": "D:\\Git Uploads\\web-khoa-luan-reactjs-asp\\BE\\cuoikiAsp\\wwwroot\\robots.txt",
+      "PackagePath": "staticwebassets\\robots.txt"
+    },
+    {
+      "Id": "D:\\Git Uploads\\web-khoa-luan-reactjs-asp\\BE\\cuoikiAsp\\wwwroot\\static\\css\\main.70118489.css",
+      "PackagePath": "staticwebassets\\static\\css\\main.70118489.css"
+    },
+    {
+      "Id": "D:\\Git Uploads\\web-khoa-luan-reactjs-asp\\BE\\cuoikiAsp\\wwwroot\\static\\css\\main.70118489.css.map",
+      "PackagePath": "staticwebassets\\static\\css\\main.70118489.css.map"
+    },
+    {
+      "Id": "D:\\Git Uploads\\web-khoa-luan-reactjs-asp\\BE\\cuoikiAsp\\wwwroot\\static\\js\\787.755bd91e.chunk.js",
+      "PackagePath": "staticwebassets\\static\\js\\787.755bd91e.chunk.js"
+    },
+    {
+      "Id": "D:\\Git Uploads\\web-khoa-luan-reactjs-asp\\BE\\cuoikiAsp\\wwwroot\\static\\js\\787.755bd91e.chunk.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\787.755bd91e.chunk.js.map"
+    },
+    {
+      "Id": "D:\\Git Uploads\\web-khoa-luan-reactjs-asp\\BE\\cuoikiAsp\\wwwroot\\static\\js\\main.a096acf1.js",
+      "PackagePath": "staticwebassets\\static\\js\\main.a096acf1.js"
+    },
+    {
+      "Id": "D:\\Git Uploads\\web-khoa-luan-reactjs-asp\\BE\\cuoikiAsp\\wwwroot\\static\\js\\main.a096acf1.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\static\\js\\main.a096acf1.js.LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Git Uploads\\web-khoa-luan-reactjs-asp\\BE\\cuoikiAsp\\wwwroot\\static\\js\\main.a096acf1.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\main.a096acf1.js.map"
+    },
+    {
+      "Id": "D:\\Git Uploads\\web-khoa-luan-reactjs-asp\\BE\\cuoikiAsp\\wwwroot\\static\\media\\QWKddPbdfxx.3691a820e0232f92dea9.png",
+      "PackagePath": "staticwebassets\\static\\media\\QWKddPbdfxx.3691a820e0232f92dea9.png"
+    },
+    {
+      "Id": "D:\\Git Uploads\\web-khoa-luan-reactjs-asp\\BE\\cuoikiAsp\\wwwroot\\static\\media\\bg.ff619f40f992232ca286.jpg",
+      "PackagePath": "staticwebassets\\static\\media\\bg.ff619f40f992232ca286.jpg"
+    },
+    {
+      "Id": "D:\\Git Uploads\\web-khoa-luan-reactjs-asp\\BE\\cuoikiAsp\\wwwroot\\static\\media\\intro1.1070d5aadf748cc0335c.jpg",
+      "PackagePath": "staticwebassets\\static\\media\\intro1.1070d5aadf748cc0335c.jpg"
+    },
+    {
+      "Id": "D:\\Git Uploads\\web-khoa-luan-reactjs-asp\\BE\\cuoikiAsp\\wwwroot\\static\\media\\intro2.962dbabbdd5ce370aae8.jpg",
+      "PackagePath": "staticwebassets\\static\\media\\intro2.962dbabbdd5ce370aae8.jpg"
+    },
+    {
+      "Id": "D:\\Git Uploads\\web-khoa-luan-reactjs-asp\\BE\\cuoikiAsp\\wwwroot\\static\\media\\intro3.0ea714327885dc087017.jpg",
+      "PackagePath": "staticwebassets\\static\\media\\intro3.0ea714327885dc087017.jpg"
+    },
+    {
+      "Id": "D:\\Git Uploads\\web-khoa-luan-reactjs-asp\\BE\\cuoikiAsp\\wwwroot\\static\\media\\logo.a7079c716e980b4ea22b.png",
+      "PackagePath": "staticwebassets\\static\\media\\logo.a7079c716e980b4ea22b.png"
+    },
+    {
+      "Id": "D:\\Git Uploads\\web-khoa-luan-reactjs-asp\\BE\\cuoikiAsp\\wwwroot\\static\\media\\notification.3657084dc0419605a91c.eot",
+      "PackagePath": "staticwebassets\\static\\media\\notification.3657084dc0419605a91c.eot"
+    },
+    {
+      "Id": "D:\\Git Uploads\\web-khoa-luan-reactjs-asp\\BE\\cuoikiAsp\\wwwroot\\static\\media\\notification.5d0158671dd860c714c4.svg",
+      "PackagePath": "staticwebassets\\static\\media\\notification.5d0158671dd860c714c4.svg"
+    },
+    {
+      "Id": "D:\\Git Uploads\\web-khoa-luan-reactjs-asp\\BE\\cuoikiAsp\\wwwroot\\static\\media\\notification.c392cd33d9d9de730f9d.woff",
+      "PackagePath": "staticwebassets\\static\\media\\notification.c392cd33d9d9de730f9d.woff"
+    },
+    {
+      "Id": "D:\\Git Uploads\\web-khoa-luan-reactjs-asp\\BE\\cuoikiAsp\\wwwroot\\static\\media\\notification.c5d9251ea82e42f75381.ttf",
+      "PackagePath": "staticwebassets\\static\\media\\notification.c5d9251ea82e42f75381.ttf"
+    },
+    {
+      "Id": "D:\\Git Uploads\\web-khoa-luan-reactjs-asp\\BE\\cuoikiAsp\\wwwroot\\static\\media\\pdf.e0d849b4d86bb9658152.pdf",
+      "PackagePath": "staticwebassets\\static\\media\\pdf.e0d849b4d86bb9658152.pdf"
+    },
+    {
+      "Id": "D:\\Git Uploads\\web-khoa-luan-reactjs-asp\\BE\\cuoikiAsp\\wwwroot\\static\\media\\silde1.e411595e25bb9426bbf2.jpg",
+      "PackagePath": "staticwebassets\\static\\media\\silde1.e411595e25bb9426bbf2.jpg"
+    },
+    {
+      "Id": "D:\\Git Uploads\\web-khoa-luan-reactjs-asp\\BE\\cuoikiAsp\\wwwroot\\static\\media\\slide2.a4f7800a36a83db5a3b5.jpg",
+      "PackagePath": "staticwebassets\\static\\media\\slide2.a4f7800a36a83db5a3b5.jpg"
+    },
+    {
+      "Id": "D:\\Git Uploads\\web-khoa-luan-reactjs-asp\\BE\\cuoikiAsp\\wwwroot\\static\\media\\slide3.531c8afb90aed85f1384.jpg",
+      "PackagePath": "staticwebassets\\static\\media\\slide3.531c8afb90aed85f1384.jpg"
+    },
+    {
+      "Id": "D:\\Git Uploads\\web-khoa-luan-reactjs-asp\\BE\\cuoikiAsp\\wwwroot\\static\\media\\user.a6143582309785dca610.png",
+      "PackagePath": "staticwebassets\\static\\media\\user.a6143582309785dca610.png"
+    },
+    {
+      "Id": "D:\\Git Uploads\\web-khoa-luan-reactjs-asp\\BE\\cuoikiAsp\\wwwroot\\static\\media\\youtube.aeefd7fb120d9b3a687e.png",
+      "PackagePath": "staticwebassets\\static\\media\\youtube.aeefd7fb120d9b3a687e.png"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.build.cuoikiAsp.props",
+      "PackagePath": "build\\cuoikiAsp.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.cuoikiAsp.props",
+      "PackagePath": "buildMultiTargeting\\cuoikiAsp.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.buildTransitive.cuoikiAsp.props",
+      "PackagePath": "buildTransitive\\cuoikiAsp.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0\\staticwebassets\\msbuild.cuoikiAsp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

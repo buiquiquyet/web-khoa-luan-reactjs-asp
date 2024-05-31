@@ -2,6 +2,8 @@ import axios from "axios";
 
 const request = axios.create({
     baseURL: 'https://localhost:7225/api/v1/',
+    // baseURL: 'https://sql8010.site4now.net/api/v1/',
+    // baseURL: 'http://buiquiquyet-001-site1.jtempurl.com/api/vi',
     timeout: 3000000
 })
 

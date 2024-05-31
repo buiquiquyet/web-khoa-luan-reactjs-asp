@@ -205,3 +205,4 @@ D:\Git Uploads\web-khoa-luan-reactjs-asp\BE\cuoikiAsp\obj\Debug\net6.0\refint\cu
 D:\Git Uploads\web-khoa-luan-reactjs-asp\BE\cuoikiAsp\obj\Debug\net6.0\cuoikiAsp.pdb
 D:\Git Uploads\web-khoa-luan-reactjs-asp\BE\cuoikiAsp\obj\Debug\net6.0\cuoikiAsp.genruntimeconfig.cache
 D:\Git Uploads\web-khoa-luan-reactjs-asp\BE\cuoikiAsp\obj\Debug\net6.0\ref\cuoikiAsp.dll
+D:\Git Uploads\web-khoa-luan-reactjs-asp\BE\cuoikiAsp\bin\Debug\net6.0\cuoikiAsp.staticwebassets.runtime.json

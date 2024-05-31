@@ -3,6 +3,7 @@ import classNames from "classnames/bind";
 import styles from './AdminLogin.module.scss'
 import {  useRef } from "react";
 import * as ServiceUser from './../apiServieces/UserApi'
+import Logo from "./../Image/logo.png"
 const cx = classNames.bind(styles)
 function AdminLogin() {
     
@@ -36,7 +37,7 @@ function AdminLogin() {
     return ( 
     <div className={cx('wrapper')}>
         <div className={cx('form')}>
-            <img className={cx('form-img')} alt="img" src="	http://esdu.saodo.edu.vn//templates/saodo/images/logo.png"/>
+            <img className={cx('form-img')} alt="img" src={Logo}/>
             <span className={cx('fomr-title')}>ĐĂNG NHẬP HỆ THỐNG</span>
             <div className={cx('form-info')}>
                 <div className={cx('user-box')}>
